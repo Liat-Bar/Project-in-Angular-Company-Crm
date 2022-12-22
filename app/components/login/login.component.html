@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="container col-3 text-center">
+  <form class="mt-3" #loginForm="ngForm" (ngSubmit)="login()">
+    <h3 class="mb-4 mt-4 text-success">Login with your account</h3>
+    <div class="form-floating mb-3">
+      <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" ngModel
+        required email #email="ngModel">
+      <small class="text-danger" *ngIf="email.invalid && (email.touched || email.dirty)">Wrong email format</small>
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" ngModel
+        required minlength="8" #password="ngModel">
+      <small class="text-danger" *ngIf="password.invalid && (password.touched || password.dirty)">Password length should
+        be at lest 8 characters</small>
+
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button type="submit" class="btn btn-success w-100 mt-3" [disabled]="loginForm.invalid">Login</button>
+
+  </form>
+  <button class="btn btn-outline-primary w-100 mt-3" (click)="loginWitheGoogle()"><i class="fa-brands fa-google"></i>
+    Login with Google</button>
+  <div class="mt-4"> <a routerLink="/register">New user? Register now</a></div>
+  <p class="mt-2">&#169; All rights reserved to Liat Bar</p>
+</div>

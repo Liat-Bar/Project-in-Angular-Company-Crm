@@ -1,0 +1,8 @@
+#title-edit-customer {
+    font-size: 35px;
+    text-align: center;
+    background: -webkit-linear-gradient(rgb(25, 104, 54), rgb(2, 56, 37));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+

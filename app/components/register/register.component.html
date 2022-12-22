@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container col-3 text-center">
+  <form class="mt-5" #registerForm="ngForm" (ngSubmit)="register()">
+    <h3 class="mb-4 text-success">Register</h3>
+    <div class="form-floating mb-3">
+      <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+        [(ngModel)]="user.email" required>
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password"
+        [(ngModel)]="user.password" required minlength="8">
+
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button type="submit" class="btn btn-success w-100 mt-3">Register</button>
+  </form>
+  <div class="mt-4"> <a routerLink="/login" class="mt-5">Already have user? Login</a> </div>
+  <p class="mt-4">&#169; All rights reserved to Liat Bar</p>
+</div>

@@ -1,0 +1,31 @@
+<form  #addCustomer="ngForm" (ngSubmit)="addNewCustomer()">
+  <h4 id="title-add-customer" >Add new customer record</h4>
+
+  <div class="mb-2 mx-0">
+    <label for="exampleFormControlInput1" class="form-label">First name</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1"  name="firstName"
+      [(ngModel)]="customer.firstName" #firstName='ngModel' required>
+  </div>
+
+  <div class="mb-2 mx-0">
+    <label for="exampleFormControlInput1" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1"  name="lastName"
+      [(ngModel)]="customer.lastName" #lastName='ngModel' required>
+  </div>
+
+  <div class="mb-2 mx-0">
+    <label for="exampleFormControlInput1" class="form-label">Phone</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="phone"
+      [(ngModel)]="customer.phone" #phone='ngModel' required>
+  </div>
+
+  <div class="mb-2 mx-0">
+    <label for="exampleFormControlInput1" class="form-label">Email</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1"  name="email"
+      [(ngModel)]="customer.email" #email='ngModel' required>
+  </div>
+  <button type="submit" class="btn btn-success mx-0">&#x2b; Add Customer</button>
+</form>
+<div id="logop">
+<p class="text-success" id="logo">&#9813;</p>
+</div>

@@ -1,0 +1,33 @@
+<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+<div class="ontainer m-2">
+  <div class="row">
+    <div class="col-1 ">
+      <app-navigation></app-navigation>
+    </div>
+
+    <div class="col-11">
+      <h4 id="title-Employees">Employees</h4>
+      <input type="text" placeholder="name" [(ngModel)]="name" />
+     
+        <div class="row row-cols-3">
+        <div class="card m-2 p-3" style="width: 25rem;" *ngFor="let employee of employees | filter:'name': name as employees">
+          <div class="container text-center bg-light text-dark">
+            <div class="col">
+               
+              <img [src]="employee.img" alt="img" width="150">
+              <div class="card-body">
+                <h5 class="card-title">{{ employee.name }}</h5>
+                <div class="text-start">
+                  <li class="card-text"><span class="fw-bold">No:</span> {{ employee.id }} </li>
+                  <li class="card-text"><span class="fw-bold">Phone:</span> {{ employee.phone }} </li>
+                  <li class="card-text"><span class="fw-bold">Email:</span> {{ employee.email }} </li>
+                  <li class="card-text"><span class="fw-bold">Seniority:</span> {{ employee.seniority }} </li>
+                </div>
+              </div>
+            </div>          
+          </div>
+        </div>
+      </div>
+
+</div>

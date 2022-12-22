@@ -1,0 +1,31 @@
+<form class="m-5" #updatCustomer="ngForm" (ngSubmit)="viewTheCustomer()">
+    <h4 id="title-view-customer">View customer</h4>
+  
+    <div class="mb-3">
+        <h5>First name</h5>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Disabled input" aria-label="Disabled input example" disabled name="firstName"
+        [(ngModel)]="customer.firstName" #firstName='ngModel' required>
+    </div>
+  
+    <div class="mb-3">
+        <h5>Last name</h5>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Disabled input" aria-label="Disabled input example" disabled name="lastName"
+        [(ngModel)]="customer.lastName" #lastName='ngModel' required>
+    </div>
+  
+    <div class="mb-3">
+        <h5>Phone</h5>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Disabled input" aria-label="Disabled input example" disabled name="phone"
+        [(ngModel)]="customer.phone" #phone='ngModel' required>
+    </div>
+  
+    <div class="mb-3">
+      <h5>Email</h5>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Disabled input" aria-label="Disabled input example" disabled name="email"
+        [(ngModel)]="customer.email" #email='ngModel' required>
+    </div>
+    <div class="d-flex justify-content-end">
+    <button type="submit" class="btn btn-success">Close</button>
+</div>
+  </form>
+
